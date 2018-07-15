@@ -20,7 +20,7 @@ console.log(__dirname); console.log(require('fs').existsSync(__dirname + '/src')
 console.log(__dirname); console.log(require('fs').existsSync(__dirname + '/dist'));
 console.log(__dirname); console.log(require('fs').existsSync(__dirname + '/src/dist'));
 
-app.use('/',express.static('dist/index.html'))
+app.use('/',express.static(__dirname + '/dist'))
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
