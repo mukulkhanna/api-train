@@ -171,13 +171,29 @@ export default {
         { title: 'About', icon: 'question_answer' }
       ],
       mini: true,
-      right: null
+      window: {
+        width: 0,
+        height: 0
+      }
     }
+  },
+  methods: {
+    handleResize () {
+      this.window.width = window.innerWidth
+      this.window.height = window.innerHeight
+      if (this.window.width < 850) {
+        this.drawer = false
+      }
+    }
+  },
+  created () {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+    window.removeEventListener('resize', this.handleResize)
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;
