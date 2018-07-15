@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <!-- <v-toolbar color="teal"></v-toolbar> -->
+    <sidebar style="float:left"></sidebar>
     <router-view/>
   </div>
 </template>
 
 <script>
+import sidebar from './components/utils/sidebar.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    sidebar
+  }
 }
 </script>
 
