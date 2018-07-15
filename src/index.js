@@ -13,14 +13,7 @@ var port = process.env.PORT || 3000
 
 app.set('json spaces', 2)
 
-// console.log(__dirname); console.log(require('fs').existsSync(__dirname));
-// console.log(__dirname); console.log(require('fs').existsSync(__dirname + '/public'));
-// console.log(__dirname); console.log(require('fs').existsSync(__dirname + '/public/dist'));
-// console.log(__dirname); console.log(require('fs').existsSync(__dirname + '/src'));
-console.log(__dirname); console.log(require('fs').existsSync(__dirname + '/../public'))
-console.log(__dirname); console.log(require('fs').existsSync(__dirname + '/src/dist'))
-
-app.use('/',express.static(__dirname + '/dist'))
+app.use('/',express.static(__dirname + '/../public/dist'))
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
