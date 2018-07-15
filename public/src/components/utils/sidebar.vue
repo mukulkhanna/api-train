@@ -1,9 +1,11 @@
 <template>
   <v-app>
     <div class="sidebar">
-      <v-flex xs1 mt-2 ml-2 text-xs-left v-if="!drawer" style="position: absolute">
-        <v-btn icon class="grey lighten-5" @click.stop="drawer =! drawer"><v-icon large color="pink">chevron_right</v-icon></v-btn>
-      </v-flex>
+      <v-layout>
+        <v-flex xs1 mt-2 ml-2 text-xs-left v-if="!drawer" style="position:absolute;z-index:10000">
+          <v-btn icon class="grey lighten-5" @click.stop="drawer =! drawer"><v-icon large color="pink">chevron_right</v-icon></v-btn>
+        </v-flex>
+      </v-layout>
       <v-navigation-drawer
         app
         absolute
@@ -34,22 +36,30 @@
           </v-list-tile-avatar>
         </v-list-tile>
       <v-list-tile
+      class="mb-1"
       >
         <v-list-tile-action>
-          <v-btn icon><v-icon>mail</v-icon></v-btn>
+          <v-btn icon to="/"><v-icon medium>fa-home</v-icon></v-btn>
+        </v-list-tile-action>
+      </v-list-tile>
+
+      <v-list-tile class="mb-1">
+        <v-list-tile-action>
+          <v-btn href="mailto:mukul18khanna@gmail.com" icon><v-icon>fa-envelope</v-icon></v-btn>
         </v-list-tile-action>
       </v-list-tile>
 
       <v-list-tile
+      class="mb-1"
       >
         <v-list-tile-action>
-          <v-btn icon href="https://www.github.com/mukulkhanna"><v-icon>fa-github</v-icon></v-btn>
+          <v-btn icon href="https://www.github.com/mukulkhanna"><v-icon medium>fa-github</v-icon></v-btn>
         </v-list-tile-action>
       </v-list-tile>
       <v-list-tile
       >
         <v-list-tile-action>
-          <v-btn icon><v-icon>fa-medium</v-icon></v-btn>
+          <v-btn icon href="https://medium.com/@mukulkhanna"><v-icon>fa-medium</v-icon></v-btn>
         </v-list-tile-action>
       </v-list-tile>
     </v-list>

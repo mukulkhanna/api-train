@@ -6,25 +6,25 @@
       <v-container>
         <v-layout justify-center>
           <v-flex xs10>
-            <div class="headline">A land of open-source apis of things that I like 🎉 </div>
+            <div class="headline">🌈 A land of open-source apis of things that I like 🎉 </div>
           </v-flex>
         </v-layout>
         <v-layout text-xs-center justify-center mt-3 mb-3>
           <v-flex xs10>
             <v-chip class="pink--text body-1">
-              <v-avatar class="pink white--text">M</v-avatar>
+              <v-avatar class="pink white--text"><b>M</b></v-avatar>
               MongoDB
             </v-chip>
             <v-chip class="pink--text body-1">
-              <v-avatar class="pink white--text">E</v-avatar>
+              <v-avatar class="pink white--text"><b>E</b></v-avatar>
                 Express.js
             </v-chip>
             <v-chip class="pink--text body-1">
-              <v-avatar class="pink white--text">V</v-avatar>
+              <v-avatar class="pink white--text"><b>V</b></v-avatar>
                 VueJS
             </v-chip>
             <v-chip class="pink--text body-1">
-              <v-avatar class="pink white--text">N</v-avatar>
+              <v-avatar class="pink white--text"><b>N</b></v-avatar>
                 Node.js
             </v-chip>
           </v-flex>
@@ -34,7 +34,7 @@
 
       <v-layout justify-center row wrap mb-5>
         <v-flex xs11 sm4 md3 ml-2>
-          <v-card hover>
+          <v-card hover flat to="info/shiffman">
             <v-card-media
               :src="require('@/assets/shiffman.jpg')"
               height="200px"
@@ -50,7 +50,7 @@
           </v-card>
         </v-flex>
         <v-flex xs12 sm4 md3 ml-2>
-          <v-card hover>
+          <v-card hover flat>
             <v-card-media
               contain
               src="https://i.pinimg.com/originals/85/e6/f7/85e6f76cf15b4255a6192b4d85c6d8c3.jpg"
@@ -60,14 +60,14 @@
             <v-card-title primary-title>
               <div>
                 <h3 class="mb-0 pink--text" style="font-family: 'Montserrat', sans-serif;font-size:25px">The Office API</h3>
-                <div class="body-1">A collection of quotes by my favourite,your favourite, our favourite - <span class="pink--text"> Daniel Shiffman</span>.</div>
+                <div class="body-1">A collection of quotes of the TV show - <span class="pink--text"> The Office</span>.</div>
               </div>
             </v-card-title>
 
           </v-card>
         </v-flex>
         <v-flex xs12 sm4 md3 ml-2>
-          <v-card hover>
+          <v-card hover flat>
             <v-card-media
               contain
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXpjratsD8w9M4wNlpzrex1JHnFQl5LKS-gNW0xQurKp-bMNZiAw"
@@ -77,7 +77,7 @@
             <v-card-title primary-title>
               <div>
                 <h3 class="mb-0 pink--text" style="font-family: 'Montserrat', sans-serif;font-size:25px">Game of Thrones API</h3>
-                <div class="body-1">A collection of quotes by my favourite,your favourite, our favourite - <span class="pink--text"> Daniel Shiffman</span>.</div>
+                <div class="body-1">A collection of quotes by the TV show - <span class="pink--text"> Game of Thrones</span>.</div>
               </div>
             </v-card-title>
 

@@ -124,6 +124,15 @@ app.get('/shiffman/quotes',(req,res) => {
     }
   })
 
+app.get('/shiffman/quotes/random',(req,res) => {
+
+  shiffman.find({}, '-_id', function (err, kittens) {
+    if (err) return console.error(err);
+    res.send(kittens[getRandomInt(kittens.length)]);
+  })
+
+})
+
 app.post('/shiffman/quotes',(req,res) => {
   console.log(req.body)
   console.log(process.env.DBAPIKEY)
