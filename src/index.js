@@ -13,7 +13,7 @@ var port = process.env.PORT || 3000
 
 app.set('json spaces', 2)
 
-app.use('/',express.static(path.join(__dirname, 'dist/index.html')))
+app.use('/',express.static('dist/index.html'))
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
