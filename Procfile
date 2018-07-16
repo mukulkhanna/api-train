@@ -1,1 +1,1 @@
-web: npm run build --prefix public/ && node src/index.js
+web: node src/index.js
