@@ -5,39 +5,33 @@
         <v-flex offset-xs1 xs12 sm4 md3>
             <v-card flat>
               <v-card-media
-                :src="require('@/assets/shiffman.jpg')"
+                contain
+                :src="require('@/assets/the-office-us.jpg')"
                 height="200px"
               ></v-card-media>
 
               <v-card-title primary-title>
                 <div>
-                  <h3 class="text-xs-left mb-0 pink--text" style="font-family: 'Montserrat', sans-serif;font-size:23px">Shiffman API</h3>
-                  <div class="text-xs-left body-1">A collection of quotes by my favourite,your favourite, our favourite - <span class="pink--text"> Daniel Shiffman</span>.</div>
+                  <h3 class="ml-0 pink--text text-xs-left" style="font-family: 'Montserrat', sans-serif;font-size:23px">The Office API</h3>
+                  <div class="text-xs-left body-1">A collection of quotes by my favourite,your favourite, our favourite - <span class="pink--text">team at Dunder Mifflin</span>.</div>
                 </div>
               </v-card-title>
 
             </v-card>
           </v-flex>
 
-        <v-flex xs11 md7 mt-3 ml-3>
+        <v-flex xs11 md7 mt-3 ml-3 mb-5>
           <h1 class="mb-1">ABOUT</h1>
           <div class="texty">
-            <span class="pink--text">Daniel Shiffman</span> works as an Associate Arts Professor at the Interactive Telecommunications Program at NYU’s Tisch School of the Arts.
+            <span class="pink--text">The Office</span> is an American television sitcom that aired on NBC from March 24, 2005, to May 16, 2013, lasting nine seasons.
           </div><br>
           <div class="texty">
-            Originally from Baltimore, Daniel received a BA in Mathematics and Philosophy from Yale University and a Master’s Degree from the ITP. He is a director of The Processing Foundation and develops tutorials, examples, and libraries for Processing and p5.js. He is the author of Learning Processing: A Beginner’s Guide to Programming Images, Animation, and Interaction and The Nature of Code (self-published via Kickstarter), an open source book about simulating natural phenomenon in Processing. He can be found talking incessantly on the YouTube about programming.
+            The series depicts the everyday lives of office employees in the Scranton, Pennsylvania, branch of the fictional Dunder Mifflin Paper Company. To simulate the look of an actual documentary, it was filmed in a single-camera setup, without a studio audience or a laugh track. The series debuted on NBC as a midseason replacement and aired 201 episodes over the course of its run. The Office initially featured Steve Carell, Rainn Wilson, John Krasinski, Jenna Fischer, and B. J. Novak as the main cast; the series experienced numerous changes to its ensemble cast during its run.
+          </div><br>
+          <div class="texty">
+            <span class="pink--text"> Since its debut, the series has frequently been listed as one of the greatest TV shows of all time.</span>
           </div>
 
-          <v-btn icon href="https://www.youtube.com/user/shiffman">
-            <v-icon medium color="red">
-              fa-youtube-play
-            </v-icon>
-          </v-btn>
-          <v-btn icon href="https://shiffman.net/about/">
-            <v-icon medium>
-              link
-            </v-icon>
-          </v-btn>
         </v-flex>
       </v-layout>
 
@@ -83,7 +77,7 @@
 
 <script>
 export default {
-  name: 'shiffman',
+  name: 'theoffice',
   data () {
     return {
       copySnackbar: false,

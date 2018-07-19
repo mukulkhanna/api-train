@@ -33,7 +33,7 @@
       </v-container>
 
       <v-layout justify-center row wrap mb-5>
-        <v-flex xs11 sm4 md3 ml-2>
+        <v-flex xs11 sm4 md3 ml-3>
           <v-card hover flat to="info/shiffman">
             <v-card-media
               :src="require('@/assets/shiffman.jpg')"
@@ -49,11 +49,10 @@
 
           </v-card>
         </v-flex>
-        <v-flex xs12 sm4 md3 ml-2>
-          <v-card hover flat>
+        <v-flex xs12 sm4 md3 ml-3>
+          <v-card hover flat to="/info/theoffice">
             <v-card-media
-              contain
-              src="https://i.pinimg.com/originals/85/e6/f7/85e6f76cf15b4255a6192b4d85c6d8c3.jpg"
+              :src="require('@/assets/the-office-us.jpg')"
               height="200px"
             ></v-card-media>
 
@@ -66,11 +65,11 @@
 
           </v-card>
         </v-flex>
-        <v-flex xs12 sm4 md3 ml-2>
-          <v-card hover flat>
+        <v-flex xs12 sm4 md3 ml-3>
+          <v-card hover flat to="/info/got">
             <v-card-media
               contain
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXpjratsD8w9M4wNlpzrex1JHnFQl5LKS-gNW0xQurKp-bMNZiAw"
+              :src="require('@/assets/images.jpeg')"
               height="200px"
             ></v-card-media>
 

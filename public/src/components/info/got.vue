@@ -3,41 +3,32 @@
     <div>
       <v-layout justify-left mt-5 pt-2 mr-4 text-xs-left row wrap justify-space-around>
         <v-flex offset-xs1 xs12 sm4 md3>
-            <v-card flat>
+            <v-card>
               <v-card-media
-                :src="require('@/assets/shiffman.jpg')"
+                contain
+                :src="require('@/assets/images.jpeg')"
                 height="200px"
               ></v-card-media>
 
               <v-card-title primary-title>
                 <div>
-                  <h3 class="text-xs-left mb-0 pink--text" style="font-family: 'Montserrat', sans-serif;font-size:23px">Shiffman API</h3>
-                  <div class="text-xs-left body-1">A collection of quotes by my favourite,your favourite, our favourite - <span class="pink--text"> Daniel Shiffman</span>.</div>
+                  <h3 class="ml-0 pink--text text-xs-left" style="font-family: 'Montserrat', sans-serif;font-size:23px">Game of Thrones API</h3>
+                  <div class="text-xs-left body-1">A collection of quotes by my favourite,your favourite, our favourite - <span class="pink--text">team at Dunder Mifflin</span>.</div>
                 </div>
               </v-card-title>
 
             </v-card>
           </v-flex>
 
-        <v-flex xs11 md7 mt-3 ml-3>
+        <v-flex xs11 md7 mt-3 ml-3 mb-5>
           <h1 class="mb-1">ABOUT</h1>
           <div class="texty">
-            <span class="pink--text">Daniel Shiffman</span> works as an Associate Arts Professor at the Interactive Telecommunications Program at NYU’s Tisch School of the Arts.
+            <span class="pink--text">Game of Thrones</span> is an American fantasy drama television series created by David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones. The series premiered on HBO in the United States on April 17, 2011, and its seventh season ended on August 27, 2017. The series will conclude with its eighth season premiering in 2019.
           </div><br>
           <div class="texty">
-            Originally from Baltimore, Daniel received a BA in Mathematics and Philosophy from Yale University and a Master’s Degree from the ITP. He is a director of The Processing Foundation and develops tutorials, examples, and libraries for Processing and p5.js. He is the author of Learning Processing: A Beginner’s Guide to Programming Images, Animation, and Interaction and The Nature of Code (self-published via Kickstarter), an open source book about simulating natural phenomenon in Processing. He can be found talking incessantly on the YouTube about programming.
+            Game of Thrones has attracted record viewership on HBO and has a broad, active, international fan base. It has been acclaimed by critics, particularly for its acting, complex characters, story, scope, and production values, although its frequent use of nudity and violence (including sexual violence) has been criticized. The series has received 38 Primetime Emmy Awards, including Outstanding Drama Series in 2015 and 2016, more than any other primetime scripted television series.
           </div>
 
-          <v-btn icon href="https://www.youtube.com/user/shiffman">
-            <v-icon medium color="red">
-              fa-youtube-play
-            </v-icon>
-          </v-btn>
-          <v-btn icon href="https://shiffman.net/about/">
-            <v-icon medium>
-              link
-            </v-icon>
-          </v-btn>
         </v-flex>
       </v-layout>
 
@@ -83,14 +74,15 @@
 
 <script>
 export default {
-  name: 'shiffman',
+  name: 'got',
   data () {
     return {
       copySnackbar: false,
       cards: [
-        { head: 'ALL QUOTES', text: 'Get all quotes @' , link: 'https://api-train.herokuapp.com/shiffman/quotes' },
-        { head: 'NUMBER OF QUOTES', text: 'Get specific number of quotes @', link: 'https://api-train.herokuapp.com/shiffman/quotes?count=5' },
-        { head: 'RANDOM QUOTE', text: 'Get a random quote @', link: 'https://api-train.herokuapp.com/shiffman/quotes/random' }
+        { head: 'ALL QUOTES', text: 'Get all quotes @' , link: 'https://api-train.herokuapp.com/got/quotes' },
+        { head: 'NUMBER OF QUOTES', text: 'Get specific number of quotes @', link: 'https://api-train.herokuapp.com/got/quotes?count=5' },
+        { head: 'RANDOM QUOTE', text: 'Get a random quote @', link: 'https://api-train.herokuapp.com/got/quotes/random' },
+        { head: "CHARACTERS' QUOTES", text: "Get characters' quotes @", link: 'https://api-train.herokuapp.com/got/quotes?character=Tyrion' }
       ]
     }
   },
