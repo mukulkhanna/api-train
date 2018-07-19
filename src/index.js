@@ -5,6 +5,7 @@ var connection = require('./db')
 var cors = require('cors')
 var theOffice = require('./schemas').theOffice
 var shiffman = require('./schemas').shiffman
+var got = require('./schemas').got
 
 const app = express()
 
@@ -76,6 +77,57 @@ app.get('/theoffice/quotes',(req,res) => {
 
 })
 
+app.get('/got/quotes',(req,res) => {
+
+  if(req.query.count){
+    if(!req.query.character){
+      got.find({},'-_id',function (err, quotes) {
+        if (req.query.count > quotes.length) {
+          res.send({Error:"Please try a lower count value. 😕"})
+        }
+        else {
+          var subset = []
+          for (var i=0;i<req.query.count;i++) {
+            subset.push(quotes[i])
+          }
+          res.send(subset)
+        }
+      })
+    }
+
+    else if(req.query.character){
+      got.find({character:req.query.character},'-_id',function (err, quotes) {
+        if (req.query.count > quotes.length) {
+          res.send({Error:"Please try a lower count value. 😕"})
+        }
+        else{
+          var subset = []
+          for (var i=0;i<req.query.count;i++) {
+            subset.push(quotes[i])
+          }
+          res.send(subset)
+        }
+      })
+
+    }
+  }
+
+  else if (req.query.character) {
+    got.find({character: req.query.character},'-_id',function (err, quotes) {
+      if (err) return console.error(err);
+      res.send(quotes);
+    })
+  }
+
+  else if(!req.query.character && !req.query.count) {
+    got.find({},'-_id',function (err, quotes) {
+      if (err) return console.error(err);
+      res.send(quotes);
+    })
+  }
+
+})
+
 app.get('/theoffice/quotes/random',(req,res) => {
 
   if(!req.query.character){
@@ -94,12 +146,45 @@ app.get('/theoffice/quotes/random',(req,res) => {
   }
 })
 
+app.get('/got/quotes/random',(req,res) => {
+
+  if(!req.query.character){
+    theOffice.find({}, '-_id', function (err, kittens) {
+      if (err) return console.error(err);
+      res.send(kittens[getRandomInt(kittens.length)]);
+    })
+  }
+
+  else if(req.query.character){
+    got.find({character:req.query.character}, '-_id', function (err, kittens) {
+      if (err) res.send(err);
+      res.send(kittens[getRandomInt(kittens.length)]);
+    })
+
+  }
+})
+
 app.post('/theoffice/quotes',(req,res) => {
   console.log("Received")
   console.log(req.body.quote)
   console.log(process.env.DBAPIKEY)
   if (req.body.apiKey == process.env.DBAPIKEY){
     var entry = new theOffice({
+      quote: req.body.quote,
+      character: req.body.character
+    })
+    console.log(entry)
+    entry.save()
+    res.send("SERVER: Successful 🌈")
+  }
+})
+
+app.post('/got/quotes',(req,res) => {
+  console.log("Received")
+  console.log(req.body.quote)
+  console.log(process.env.DBAPIKEY)
+  if (req.body.apiKey == process.env.DBAPIKEY){
+    var entry = new got({
       quote: req.body.quote,
       character: req.body.character
     })
@@ -151,5 +236,7 @@ app.post('/shiffman/quotes',(req,res) => {
     res.send("SERVER: Successful 🌈")
   }
 })
+
+
 
 app.listen(port, () => console.log('Example app listening on port 3000!'))

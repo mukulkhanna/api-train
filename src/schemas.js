@@ -6,6 +6,11 @@ const theOfficeSchema = new Schema({
   character: String
 },{ versionKey: false })
 
+const gotSchema = new Schema({
+  quote: String,
+  character: String
+},{ versionKey: false })
+
 const shiffmanSchema = new Schema({
   quote: String,
   src: String
@@ -13,3 +18,4 @@ const shiffmanSchema = new Schema({
 
 module.exports.theOffice = mongoose.model('theOffice',theOfficeSchema,'The Office')
 module.exports.shiffman = mongoose.model('shiffman',shiffmanSchema,'Shiffman')
+module.exports.got = mongoose.model('got',gotSchema,'GameOfThrones')
