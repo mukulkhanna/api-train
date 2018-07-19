@@ -3,3 +3,5 @@ package-lock.json
 /public/config/dev.env.js
 public/config/dev.env.js
 *.env.js
+*.env
+.env
