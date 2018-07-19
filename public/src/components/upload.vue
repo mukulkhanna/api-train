@@ -47,7 +47,7 @@
             </v-text-field>
           </v-flex>
     </v-layout>
-          <v-btn :disabled="!valid" color="pink"  @click="upload">UPLOAD</v-btn>
+          <v-btn :disabled="!valid" color="pink" class="white--text" @click="upload">UPLOAD</v-btn>
   </v-form>
           <v-snackbar
           v-model="snackbar"
@@ -78,7 +78,7 @@ export default {
       ],
       rules: [
         v => !!v || 'Field is required',
-        v => (v && v.length >= 5) || 'Field must be greater than 5 characters'
+        v => (v && v.length >= 3) || 'Field must be at least have 3 characters'
       ],
     }
   },
@@ -94,7 +94,7 @@ export default {
           character: this.character,
           apiKey: process.env.PASS_WORD
         }
-        axios.post('http://api-train.herokuapp.com/theoffice/quotes', myQuote)
+        axios.post('https://api-train.herokuapp.com/theoffice/quotes', myQuote)
           .then(() => {
             console.log('✅')
             this.snack = 'Successfuly uploaded ✅'
