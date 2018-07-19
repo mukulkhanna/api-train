@@ -29,7 +29,7 @@
             </v-chip>
           </v-flex>
         </v-layout>
-        <p><v-btn icon><v-icon large color="pink">fa-github</v-icon></v-btn></p>
+        <p><v-btn icon href="https://github.com/mukulkhanna/api-train"><v-icon large color="pink">fa-github</v-icon></v-btn></p>
       </v-container>
 
       <v-layout justify-center row wrap mb-5>
