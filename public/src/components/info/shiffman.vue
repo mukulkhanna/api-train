@@ -57,7 +57,7 @@
                             <v-btn icon v-clipboard:copy="card.link" @click="handleCopyStatus()"><v-icon color="pink">fa-clone</v-icon></v-btn>
                           </v-flex>
                           <v-flex xs2>
-                            <v-btn icon href="https://api-train.herokuapp.com/shiffman/quotes"><v-icon small color="pink">launch</v-icon></v-btn>
+                            <v-btn icon :href="card.link"><v-icon small color="pink">launch</v-icon></v-btn>
                           </v-flex>
                         </v-layout>
                       </h3>
