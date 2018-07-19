@@ -5,10 +5,8 @@ var connection = require('./db')
 var theOffice = require('./schemas').theOffice
 var shiffman = require('./schemas').shiffman
 
-var history = require('connect-history-api-fallback')
 const app = express()
 
-app.use(history())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 var port = process.env.PORT || 3000
@@ -16,6 +14,9 @@ var port = process.env.PORT || 3000
 app.set('json spaces', 2)
 
 app.use('/',express.static(__dirname + '/../public/dist'))
+app.use('/info/shiffman',express.static(__dirname + '/../public/dist'))
+app.use('/info/got',express.static(__dirname + '/../public/dist'))
+app.use('/info/theoffice',express.static(__dirname + '/../public/dist'))
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
