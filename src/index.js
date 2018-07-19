@@ -96,7 +96,7 @@ app.get('/theoffice/quotes/random',(req,res) => {
 
 app.post('/theoffice/quotes',(req,res) => {
   console.log("Received")
-  console.log(req.body)
+  console.log(req.body.quote)
   console.log(process.env.DBAPIKEY)
   if (req.body.apiKey == process.env.DBAPIKEY){
     var entry = new theOffice({
