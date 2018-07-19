@@ -116,7 +116,7 @@ app.get('/shiffman/quotes',(req,res) => {
       res.send(quotes)
     })
   } else if(req.query.count){
-    theOffice.find({},'-_id',function (err, quotes) {
+    shiffman.find({},'-_id',function (err, quotes) {
       if (req.query.count > quotes.length) {
           res.send({Error:"Please try a lower count value. 😕"})
         }

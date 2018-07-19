@@ -52,7 +52,7 @@
           <v-snackbar
           v-model="snackbar"
           top
-          color="success"
+          :color="snackColor"
           >
             {{snack}}
           </v-snackbar>
@@ -98,13 +98,15 @@ export default {
         axios.post('https://api-train.herokuapp.com/theoffice/quotes', myQuote)
           .then(() => {
             console.log('✅')
-            this.snack = 'Successfuly uploaded ✅'
+            this.snack = 'Successfuly uploaded.'
+            this.snackColor = "success"
             this.snackbar = true
             this.clear()
           })
           .catch((err) => {
-            console.log(err)
-            this.snack = err
+            // console.log(err)
+            this.snack = 'There was an error.'
+            this.snackColor = "error"
             this.snackbar = true
           })
       }
@@ -117,13 +119,15 @@ export default {
         axios.post('https://api-train.herokuapp.com/shiffman/quotes', myQuote)
           .then(() => {
             console.log('✅')
-            this.snack = 'Successfuly uploaded ✅'
+            this.snack = 'Successfuly uploaded.'
+            this.snackColor = "success"
             this.snackbar = true
             this.clear()
           })
           .catch((err) => {
-            console.log(err)
-            this.snack = err
+            // console.log(err)
+            this.snack = 'There was an error.'
+            this.snackColor = "error"
             this.snackbar = true
           })
       }
