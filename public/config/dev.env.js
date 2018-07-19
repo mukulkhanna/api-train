@@ -3,5 +3,5 @@ const prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  PASS_WORD: '"beeburr"'
+  PASS_WORD: '"pass"'
 })
