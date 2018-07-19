@@ -2,12 +2,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 var connection = require('./db')
+var cors = require('cors')
 var theOffice = require('./schemas').theOffice
 var shiffman = require('./schemas').shiffman
 
 const app = express()
 
 app.use(bodyParser.json())
+app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
 var port = process.env.PORT || 3000
 
@@ -101,7 +103,7 @@ app.post('/theoffice/quotes',(req,res) => {
     })
     console.log(entry)
     entry.save()
-    res.send("SERVER: Successful")
+    res.send("SERVER: Successful 🌈")
   }
 })
 

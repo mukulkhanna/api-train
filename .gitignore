@@ -1,3 +1,5 @@
 node_modules/
 package-lock.json
+/public/config/dev.env.js
+public/config/dev.env.js
 *.env
