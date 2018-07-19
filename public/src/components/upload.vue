@@ -84,7 +84,7 @@ export default {
   },
   methods: {
     clear () {
-      this.quote = null,
+      this.quote = null
       this.character = null
     },
     upload () {
