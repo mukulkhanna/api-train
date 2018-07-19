@@ -94,6 +94,7 @@ export default {
           character: this.character,
           apiKey: process.env.PASS_WORD
         }
+        console.log(process.env.PASS_WORD)
         axios.post('https://api-train.herokuapp.com/theoffice/quotes', myQuote)
           .then(() => {
             console.log('✅')
