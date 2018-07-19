@@ -35,7 +35,7 @@
         <v-layout wrap justify-center mt-1>
           <v-flex xs9 sm6>
             <v-text-field
-            v-if="name==='The Office'"
+            v-if="name==='The Office'||name==='Game of Thrones'"
             :rules="rules"
             v-model="character"
             outline
@@ -94,7 +94,6 @@ export default {
           character: this.character,
           apiKey: process.env.PASS_WORD
         }
-        console.log(myQuote)
         axios.post('https://api-train.herokuapp.com/theoffice/quotes', myQuote)
           .then(() => {
             console.log('✅')
@@ -110,6 +109,29 @@ export default {
             this.snackbar = true
           })
       }
+
+      else if (this.name === 'Game of Thrones') {
+        var myQuote = {
+          quote: this.quote,
+          character: this.character,
+          apiKey: process.env.PASS_WORD
+        }
+        axios.post('https://api-train.herokuapp.com/got/quotes', myQuote)
+          .then(() => {
+            console.log('✅')
+            this.snack = 'Successfuly uploaded.'
+            this.snackColor = "success"
+            this.snackbar = true
+            this.clear()
+          })
+          .catch((err) => {
+            // console.log(err)
+            this.snack = 'There was an error.'
+            this.snackColor = "error"
+            this.snackbar = true
+          })
+      }
+
       else if (this.name === 'Shiffman') {
         var myQuote = {
           quote: this.quote,

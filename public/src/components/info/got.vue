@@ -82,7 +82,8 @@ export default {
         { head: 'ALL QUOTES', text: 'Get all quotes @', link: 'https://api-train.herokuapp.com/got/quotes' },
         { head: 'NUMBER OF QUOTES', text: 'Get specific number of quotes @', link: 'https://api-train.herokuapp.com/got/quotes?count=5' },
         { head: 'RANDOM QUOTE', text: 'Get a random quote @', link: 'https://api-train.herokuapp.com/got/quotes/random' },
-        { head: "CHARACTERS' QUOTES", text: "Get characters' quotes @", link: 'https://api-train.herokuapp.com/got/quotes?character=Tyrion' }
+        { head: "CHARACTERS' QUOTES", text: "Get characters' quotes @", link: 'https://api-train.herokuapp.com/got/quotes?character=Tyrion' },
+        { head: "COUNTED QUOTES", text: "Get certain number of character's quotes @", link: 'https://api-train.herokuapp.com/got/quotes?charcater=Tyrion&count=5' }
       ]
     }
   },

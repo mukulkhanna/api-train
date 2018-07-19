@@ -86,7 +86,7 @@ export default {
         { head: 'NUMBER OF QUOTES', text: 'Get specific number of quotes @', link: 'https://api-train.herokuapp.com/theoffice/quotes?count=5' },
         { head: 'RANDOM QUOTE', text: 'Get a random quote @', link: 'https://api-train.herokuapp.com/theoffice/quotes/random' },
         { head: 'QUOTES BY CHARACTER', text: "Get a character's quote @", link: 'https://api-train.herokuapp.com/theoffice/quotes?charcater="Michael' },
-        { head: "COUNTED QUOTES", text: "Get certain number of character's quotes @", link: 'https://api-train.herokuapp.com/theoffice/quotes?charcater="Michael&count=5' }
+        { head: "COUNTED QUOTES", text: "Get certain number of character's quotes @", link: 'https://api-train.herokuapp.com/theoffice/quotes?charcater=Michael&count=5' }
       ]
     }
   },
