@@ -108,6 +108,25 @@ export default {
             this.snackbar = true
           })
       }
+      else if (this.name === 'Shiffman') {
+        var myQuote = {
+          quote: this.quote,
+          apiKey: process.env.PASS_WORD
+        }
+        console.log(myQuote)
+        axios.post('https://api-train.herokuapp.com/shiffman/quotes', myQuote)
+          .then(() => {
+            console.log('✅')
+            this.snack = 'Successfuly uploaded ✅'
+            this.snackbar = true
+            this.clear()
+          })
+          .catch((err) => {
+            console.log(err)
+            this.snack = err
+            this.snackbar = true
+          })
+      }
     }
   }
 }

@@ -141,8 +141,6 @@ app.get('/shiffman/quotes/random',(req,res) => {
 })
 
 app.post('/shiffman/quotes',(req,res) => {
-  console.log(req.body)
-  console.log(process.env.DBAPIKEY)
   if (req.body.apiKey == process.env.DBAPIKEY){
     var entry = new shiffman({
       quote: req.body.quote,
@@ -150,7 +148,7 @@ app.post('/shiffman/quotes',(req,res) => {
     })
     console.log(entry)
     entry.save()
-    res.send("SERVER: Successful")
+    res.send("SERVER: Successful 🌈")
   }
 })
 
