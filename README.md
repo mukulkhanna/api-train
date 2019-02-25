@@ -2,7 +2,7 @@
 	<img
 		width="200"
 		alt="api-Train"
-		src="https://github.com/mukulkhanna/api-train/raw/master/public/static/six.jpg">
+		src="https://raw.githubusercontent.com/mukulkhanna/api-train/master/web/static/six.jpg">
 </h1>
 <h3 align="center">
 	Lorem ipsum dolor sir amet
