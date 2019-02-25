@@ -1,7 +1,7 @@
 <h1 align="center">
 	<img
 		width="200"
-		alt="The Lounge"
+		alt="api-Train"
 		src="https://github.com/mukulkhanna/api-train/raw/master/public/static/six.jpg">
 </h1>
 <h3 align="center">
