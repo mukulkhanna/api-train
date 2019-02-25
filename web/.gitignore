@@ -14,3 +14,4 @@ config/prod.env.js
 *.njsproj
 *.sln
 ./config/dev.env.js
+!config/prod.env.js

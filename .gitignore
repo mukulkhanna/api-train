@@ -6,3 +6,4 @@ public/config/dev.env.js
 *.env
 .env
 web/config/dev.env.js
+!*prod.env.js
