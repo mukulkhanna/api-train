@@ -16,11 +16,11 @@ var port = process.env.PORT || 3000
 
 app.set('json spaces', 2)
 
-app.use('/',express.static(__dirname + '/../public/dist'))
-app.use('/info/shiffman',express.static(__dirname + '/../public/dist'))
-app.use('/info/got',express.static(__dirname + '/../public/dist'))
-app.use('/info/theoffice',express.static(__dirname + '/../public/dist'))
-app.use('/upload/quotes',express.static(__dirname + '/../public/dist'))
+app.use('/',express.static(__dirname + '/../web/dist'))
+app.use('/info/shiffman',express.static(__dirname + '/../web/dist'))
+app.use('/info/got',express.static(__dirname + '/../web/dist'))
+app.use('/info/theoffice',express.static(__dirname + '/../web/dist'))
+app.use('/upload/quotes',express.static(__dirname + '/../web/dist'))
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
