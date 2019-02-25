@@ -23,3 +23,17 @@
 	
 </p>
 
+
+## Technology Stack
+
+The technology stack of the project contains the following components-
+
+### Components
+
+* Frontend framework - [Vue.js](https://vuejs.org/)
+* Backend framework - [Express](https://expressjs.com/)
+* App deployment - [Heroku](https://heroku.com)
+* Database - [Mongodb](https://www.mongodb.com/)
+* Database hosting - [mLab](https://mlab.com/)
+
+## Installation
