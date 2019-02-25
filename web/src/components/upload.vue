@@ -137,7 +137,6 @@ export default {
           quote: this.quote,
           apiKey: process.env.PASS_WORD
         }
-        console.log(myQuote)
         axios.post('https://api-train.herokuapp.com/shiffman/quotes', myQuote)
           .then(() => {
             console.log('✅')
