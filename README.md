@@ -1,12 +1,10 @@
+## api-train 🚂
 <h1 align="center">
 	<img
 		width="200"
 		alt="api-Train"
 		src="https://raw.githubusercontent.com/mukulkhanna/api-train/master/web/static/six.jpg">
 </h1>
-<h3 align="center">
-	Lorem ipsum dolor sir amet
-</h3>
 
 <p align="center">
 	<strong>
